@@ -12,23 +12,21 @@
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" 
         crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/reponsive.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/reponsive.css">
      
-        
 
 </head>
 
 <body>
-
-                     <!-- Login Modal -->
+      <!-- Login Modal -->
                     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="loginModalLabel">Login to GiaBao Security</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>  
+                        </div>
                         <div class="modal-body">
                             <form>
                             <div class="mb-3">
@@ -79,7 +77,7 @@
             <div class="container-fluid mx-5">
                 <a class="navbar-brand" href="#">
                     <div class="logo-header">
-                        <img src="./img/logo-security.png" alt="error-loading-img">
+                        <img src="../img/logo-security.png" alt="error-loading-img">
                     </div>       
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
@@ -88,27 +86,27 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarContent">
-                    <ul class="navbar-nav mb-2 ms-lg-auto mb-lg-0 gap-2 gap-lg-4 align-items-center">
+                    <ul class="navbar-nav mb-2 ms-lg-auto mb-lg-0 gap-2 gap-lg-4 align-items-end">
                         <li class="nav-item">
-                            <a class="nav-link" href="./index.html">Home</a>
+                            <a class="nav-link" href="../index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./html/about.html">About</a>
+                            <a class="nav-link" href="./about.html">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./html/services.html">Services</a>
+                            <a class="nav-link" href="./services.html">Services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./html/plans.html">Plans</a>
+                            <a class="nav-link" href="./plans.html">Plans</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./html/contact.html">Contact</a>
+                            <a class="nav-link" href="./contact.html">Contact</a>
                         </li>
                         <li class="nav-item">
                             <button type="button" class="btn btn-light" id="login-btn" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button> 
                             <!-- login dua vao navbar -->
                         </li>
-                        <li class="nav-item">   
+                      <li   class="nav-item">
                             <button type="button" class="btn btn-outline-light" id="signup-btn" data-bs-toggle="modal" data-bs-target="#signupModal">Signup</button>
                         </li>
                     </ul>
@@ -116,106 +114,112 @@
             </div>
         </nav>
     </header>
+    <main>
+        <section class="container my-5">
+  <h2 class="about-us-title">About Us</h2>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="about-card text-center" data-bs-toggle="modal" data-bs-target="#trustedModal"> 
+        <!-- doi div clickable -->
+        <img src="../img/about-security1.jpg" alt="Trusted Security" class="img-fluid mb-3">
+        
+        <h4>Trusted Security</h4>
+        <p>We’ve protected clients across Vietnam for over 20 years with proven excellence.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="about-card text-center" data-bs-toggle="modal" data-bs-target="#supportModal">
+        <!-- doi div clickable -->
 
-    <main id="main">
-        <section class="main-title container-fluid">
-            <div class="row col-12">
-                <div class="main-title-left col-lg-6 mb-4 mb-lg-0">
-                    <div class="main-content-left ms-lg-5">
-                        <h2>GiaBao's</h2>
-                        <h1>Professional</h1>
-                        <h4>Security Services</h4>
-                        <p>Gia Bao Security Service is a professional security company based in Ho Chi Minh City, Vietnam. They specialize in providing <b> security solutions </b>for businesses and individuals, ensuring safety and protection through trained personnel and advanced security systems. Their services include <b>bodyguard services, surveillance, and security consulting.</b></p>
-                        <button type="button" class="btn">More Info</button>
-                    </div>
-                </div>
-                <div class="main-title-right col-lg-6 mb-4 mb-lg-0">
-                    <img src="./img/giabao-security-main-img2.jpg" alt="Error Loading Image" class="w-100">
-                </div>
-            </div>
-        </section>
-
-        <section class="main-content-new container-fluid my-5 p-4">
-            <div class="row">
-                <div class="col-md-4 p-4 d-flex">
-                    <div class="content-new-box text-center p-4 border rounded shadow d-flex flex-column justify-content-between">
-                        <h3>Security Services</h3>
-                        <p>Gia Bao Security Service offers a wide range of security services, including bodyguard services, surveillance, and security consulting.</p>
-                        <button type="button" class="btn align-self-center">more details</button>
-                    </div>
-                </div>
-                <div class="col-md-4 p-4 d-flex">
-                    <div class="content-new-box text-center p-4 border rounded shadow d-flex flex-column justify-content-between">
-                        <h3>Your Safety, Our Priority</h3>
-                        <p>At GiaBao Security, we are committed to providing top-tier protection for businesses and individuals. With our highly trained security personnel and cutting-edge surveillance systems, we ensure that you and your assets are safeguarded at all times.</p>
-                        <button type="button" class="btn align-self-center">more details</button>
-                    </div>
-                </div> 
-                <div class="col-md-4 p-4 d-flex">
-                    <div class="content-new-box text-center p-4 border rounded shadow d-flex flex-column justify-content-between">
-                        <h3>Security Services</h3>
-                        <p>Gia Bao Security Service offers a wide range of security services, including bodyguard services, surveillance, and security consulting.</p>
-                        <button type="button" class="btn align-self-center">more details</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="main-info-box py-5 bg-light">
-            <div class="container-fluid">
-                <h2 class="mb-4 text-primary text-center fw-bold text-uppercase">About GiaBao Security</h2>
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <p>GiaBao Security is a company providing professional security services, ensuring absolute safety for customers. We provide optimal security solutions from monitoring, personal protection to comprehensive security systems.</p>
-                        <button type="button" class="btn main-new-box align-self-center">more details</button>
-                    </div>
-                    <div class="col-md-6">
-                        <img src="./img/man.jpg" alt="Giới thiệu về GiaBao Security" class="rounded shadow custom-img" alt="Trí tuệ">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-5 text-white">
-            <div class="container-fluid text-center">
-                <h2 class="mb-4 text-uppercase fw-bold">VIDEO</h2>
-                <video controls width="640" class="mx-auto d-block trailer-video">
-                    <source src="./video/video-security.mp4" type="video/mp4" class="w-100">
-                </video>
-            </div>
-        </section>
-
-        <section class="main-info-box py-5 bg-light">
-            <div class="container-fluid">
-                <h2 class="mb-4 text-primary text-center fw-bold">STORY</h2>
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <p>GiaBao Security began with a vision—to create a safer environment for businesses and individuals in Vietnam. With years of expertise and dedicated professionals, we have built a reputation for delivering high-quality protection services, ensuring trust and reliability.</p>
-                        <button type="button" class="btn main-new-box align-self-center">more details</button>
-                    </div>
-                    <div class="col-md-6">
-                        <img src="./img/rock.jfif" alt="Giới thiệu về GiaBao Security" class="rounded shadow custom-img" alt="Trí tuệ">
-                    </div>
-                </div>
-            </div>
-        </section>
+        <img src="../img/about-security2.jpg" alt="24/7 Support" class="img-fluid mb-3">
+        <h4>24/7 Support</h4>
+        <p>Day or night, our trained dispatch team is ready to respond to any issue.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="about-card text-center">
+        <img src="../img/about-security3.jpg" alt="Nationwide Coverage" class="img-fluid mb-3">
+        <h4>Nationwide Coverage</h4>
+        <p>From Hanoi to Can Tho, we deliver consistent and reliable protection services.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="about-card text-center">
+        <img src="../img/about-security4.jpg" alt="Experienced Personnel" class="img-fluid mb-3">
+        <h4>Experienced Personnel</h4>
+        <p>Our guards are vetted, trained, and licensed for maximum professionalism.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="about-card text-center">
+        <img src="../img/about-security5.jpg" alt="Modern Tech" class="img-fluid mb-3">
+        <h4>Modern Tech</h4>
+        <p>We leverage surveillance systems, drones, and GPS for smarter coverage.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="about-card text-center">
+        <img src="../img/about-security6.jpg" alt="Custom Plans" class="img-fluid mb-3">
+        <h4>Custom Plans</h4>
+        <p>We tailor services to match your site type, industry, and risk level.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="about-card text-center">
+        <img src="../img/about-security7.jpg" alt="Emergency Ready" class="img-fluid mb-3">
+        <h4>Emergency Ready</h4>
+        <p>We prepare for floods, fires, and civil events with quick-deploy protocols.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="about-card text-center">
+        <img src="../img/about-security8.jpg" alt="Client First" class="img-fluid mb-3">
+        <h4>Client First</h4>
+        <p>Every contract comes with a dedicated relationship manager to ensure success.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="about-card text-center">
+        <img src="../img/about-security9.jpg" alt="Training Academy" class="img-fluid mb-3">
+        <h4>Training Academy</h4>
+        <p>We run our own academy to ensure standards of strength, service, and integrity.</p>
+      </div>
+    </div>
+    <div class="col-md-4 offset-md-2">
+      <div class="about-card text-center">
+        <img src="../img/about-security10.jpg" alt="Eco Commitment" class="img-fluid mb-3">
+        <h4>Eco Commitment</h4>
+        <p>We minimize our environmental impact through smart patrol routes and digital logs.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="about-card text-center">
+        <img src="../img/about-security11.jpg" alt="Award-Winning" class="img-fluid mb-3">
+        <h4>Award-Winning</h4>
+        <p>We’re proud to be recognized as one of Vietnam’s top 100 trusted brands.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
     </main>
-    <footer class="bg-dark text-light pt-5 pb-3">
+    <footer id="footer"></footer>
+     
+<footer class="bg-dark text-light pt-5 pb-3">
         <div class="container">
             <div class="row">
                 <div class="col-md-3 mb-4">
                     <a href="#" class="d-flex align-items-center gap-2 text-decoration-none pb-4">
-                        <img src="./img/logo-security.png" alt="logo" width="100" class="rounded-circle bg-white">
+                        <img src="../img/logo-security.png" alt="logo" width="100" class="rounded-circle bg-white">
                         <div class="d-flex flex-column">
                             <h5 class="fw-bold text-warning text-uppercase">GiaBao</h5>
                             <h5 class="fw-bold text-warning text-uppercase">Security Services</h5>
                         </div>
                     </a>
                     <div class="d-flex gap-3">
-                        <a href="https://facebook.com" class="connect-item"><img src="./img/facebook.png" alt=""></a>
-                        <a href="https://youtube.com" class="connect-item"><img src="./img/youtube.png" alt=""></a>
-                        <a href="https://tiktok.com" class="connect-item"><img src="./img/tiktok.png" alt=""></a>
+                        <a href="https://facebook.com" class="connect-item"><img src="../img/facebook.png" alt=""></a>
+                        <a href="https://youtube.com" class="connect-item"><img src="../img/youtube.png" alt=""></a>
+                        <a href="https://tiktok.com" class="connect-item"><img src="../img/tiktok.png" alt=""></a>
                     </div>
                 </div>
 
@@ -251,5 +255,48 @@
             © 2025 GiaBao's Professional Security Services All rights reserved.
         </div>
     </footer>
+
+
+<div class="modal fade" id="trustedModal" tabindex="-1" aria-labelledby="trustedModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="trustedModalLabel">Trusted Security</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>For over two decades, we’ve built an impeccable reputation by protecting thousands of clients across Vietnam.</p>
+        <ul>
+          <li>ISO-certified security procedures</li>
+          <li>Background-checked personnel</li>
+          <li>Real-time incident reporting and analytics</li>
+          <li>Collaborations with local law enforcement</li>
+          <li>High client retention rate through consistent service</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="supportModal" tabindex="-1" aria-labelledby="supportModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="supportModalLabel">24/7 Support</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Our support system operates around the clock to ensure peace of mind.</p>
+        <ul>
+          <li>Live dispatch operators available 24 hours</li>
+          <li>Multilingual support staff</li>
+          <li>Emergency hotlines with 2-minute average response time</li>
+          <li>Cloud-connected control centers monitoring all assets</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
