@@ -1,2 +1,26 @@
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 992px) {
+    .navbar-nav.align-items-center {
+        align-items: flex-end !important;
+    }
+
+    .main-content-left {
+        text-align: center;
+    }
+
+    .main-content-left p {
+        width: 100% !important;
+        text-align: center !important;
+    }
+    
+    .main-new-box {
+        margin-bottom: 10px;
+    }
+    .main-info-box {
+        text-align: center;
+    }
+}
+@media screen and (max-width: 768px) {
+    .trailer-video {
+        width: 100%;
+    }
 }
