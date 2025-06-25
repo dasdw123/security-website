@@ -15,65 +15,67 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/reponsive.css">
      
-        
+    
+    <style>
+    </style>
 
 </head>
 
 <body>
 
-                     <!-- Login Modal -->
-                    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="loginModalLabel">Login to GiaBao Security</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>  
-                        <div class="modal-body">
-                            <form>
-                            <div class="mb-3">
-                                <label for="loginEmail" class="form-label">Email address</label>
-                                <input type="email" class="form-control" id="loginEmail" placeholder="you@example.com">
-                            </div>
-                            <div class="mb-3">
-                                <label for="loginPassword" class="form-label">Password</label>
-                                <input type="password" class="form-control" id="loginPassword" placeholder="••••••••">
-                            </div>
-                            <button type="submit" class="btn btn-primary w-100">Login</button>
-                            </form>
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login to GiaBao Security</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="login-form">
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="loginEmail" placeholder="you@example.com">
                         </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="loginPassword" placeholder="••••••••">
                         </div>
-                    </div>
-                    </div>
-
-                    <!-- Signup Modal -->
-                    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="signupModalLabel">Create Your GiaBao Account</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Signup Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">Create Your GiaBao Account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="signup-form">
+                        <div class="mb-3">
+                            <label for="signupEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="signupEmail" placeholder="you@example.com">
                         </div>
-                        <div class="modal-body">
-                            <form>
-                            <div class="mb-3">
-                                <label for="signupEmail" class="form-label">Email address</label>
-                                <input type="email" class="form-control" id="signupEmail" placeholder="you@example.com">
-                            </div>
-                            <div class="mb-3">
-                                <label for="signupUsername" class="form-label">Username</label>
-                                <input type="text" class="form-control" id="signupUsername" placeholder="Choose a username">
-                            </div>
-                            <div class="mb-3">
-                                <label for="signupPassword" class="form-label">Password</label>
-                                <input type="password" class="form-control" id="signupPassword" placeholder="••••••••">
-                            </div>
-                            <button type="submit" class="btn btn-primary w-100">Sign Up</button>
-                            </form>
+                        <div class="mb-3">
+                            <label for="signupUsername" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="signupUsername" placeholder="Choose a username">
                         </div>
+                        <div class="mb-3">
+                            <label for="signupPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="signupPassword" placeholder="••••••••">
                         </div>
-                    </div>
-                    </div>
+                        <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <header id="header">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid mx-5">
@@ -104,12 +106,20 @@
                         <li class="nav-item">
                             <a class="nav-link" href="./html/contact.html">Contact</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" id="login-container">
                             <button type="button" class="btn btn-light" id="login-btn" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button> 
                             <!-- login dua vao navbar -->
                         </li>
-                        <li class="nav-item">   
+                        <li class="nav-item" id="signup-container">   
                             <button type="button" class="btn btn-outline-light" id="signup-btn" data-bs-toggle="modal" data-bs-target="#signupModal">Signup</button>
+                        </li>
+                        <li class="nav-item dropdown d-none">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="./img/facebook.png" alt="User" width="30">
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item custom-dropdown" href="#">Logout</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -255,5 +265,32 @@
             © 2025 GiaBao's Professional Security Services All rights reserved.
         </div>
     </footer>
+    <script src="./js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", checkLoginStatus);
+        const loginForm = document.getElementById('login-form');
+        const signupForm = document.getElementById('signup-form');
+        loginForm.addEventListener('submit', fLogin);
+        signupForm.addEventListener('submit', fSignup);
+        document.querySelector('.custom-dropdown').addEventListener('click', fLogout);
+        
+        function checkLoginStatus() {
+            const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+            const loginBtn = document.getElementById('login-container');
+            const signupBtn = document.getElementById('signup-container');
+            const dropdownMenu = document.querySelector('.nav-item.dropdown');
+
+            if (currentUser) {
+                loginBtn.classList.add('d-none');
+                signupBtn.classList.add('d-none');
+                dropdownMenu.classList.remove('d-none');
+            } else {
+
+                loginBtn.classList.remove('d-none');
+                signupBtn.classList.remove('d-none');
+                dropdownMenu.classList.add('d-none');
+            }
+        }
+    </script>
 </body>
 </html>
