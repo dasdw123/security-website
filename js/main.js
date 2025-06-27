@@ -12,7 +12,13 @@ function fLogin(event) {
     if (user) {
         alert("Login successful!");
         localStorage.setItem('currentUser', JSON.stringify(user));
-        window.location.href = "./";
+        path_link = window.location.pathname;
+        parent_path = path_link.substring(0, path_link.lastIndexOf('/'));
+        if (parent_path.split('/').pop() === "Final-project") {
+            window.location.href = "./index.html";
+        } else {
+            window.location.href = "../index.html";
+        }
     } else {
         alert("Invalid email or password.");
     }
@@ -37,24 +43,49 @@ function fSignup(event) {
     users.push(newUser);
     localStorage.setItem('users', JSON.stringify(users));
     alert("Signup successful! You can now log in.");
-    window.location.href = "./";
+    path_link = window.location.pathname;
+    parent_path = path_link.substring(0, path_link.lastIndexOf('/'));
+    if (parent_path.split('/').pop() === "Final-project") {
+        window.location.href = "./index.html";
+    } else {
+        window.location.href = "../index.html";
+    }
 }
 
 function fLogout() {
     localStorage.removeItem('currentUser');
+    path_link = window.location.pathname;
+    parent_path = path_link.substring(0, path_link.lastIndexOf('/'));
+    if (parent_path.split('/').pop() === "Final-project") {
+        window.location.href = "./index.html";
+    } else {
+        window.location.href = "../index.html";
+    }
     alert("You have been logged out.");
-    window.location.href = "./";
+    
 }
 
-// function checkLoginStatus(event) {
-//     event.preventDefault();
-//     const currentUser = JSON.parse(localStorage.getItem('currentUser'));
-//     if (currentUser) {
-//         document.querySelector('.nav-item.dropdown').classList.remove('d-block');
-//         document.querySelector('nav-item button').classList.add('d-none');
-//         document.querySelector('.nav-item.dropdown a').addEventListener('click', fLogout);
-//     } else {
-//         document.querySelector('.nav-item.dropdown').classList.add('d-none');
-//         document.querySelector('nav-item button').classList.add('d-none');
-//     }
-// }
+function checkLoginStatus() {
+    const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    const loginBtn = document.getElementById('login-container');
+    const signupBtn = document.getElementById('signup-container');
+    const dropdownMenu = document.querySelector('.nav-item.dropdown');
+
+    if (currentUser) {
+        loginBtn.classList.add('d-none');
+        signupBtn.classList.add('d-none');
+        dropdownMenu.classList.remove('d-none');
+    } else {
+
+        loginBtn.classList.remove('d-none');
+        signupBtn.classList.remove('d-none');
+        dropdownMenu.classList.add('d-none');
+    }
+}
+
+document.addEventListener("DOMContentLoaded", checkLoginStatus);
+const loginForm = document.getElementById('login-form');
+const signupForm = document.getElementById('signup-form');
+loginForm.addEventListener('submit', fLogin);
+signupForm.addEventListener('submit', fSignup);
+document.querySelector('.custom-dropdown').addEventListener('click', fLogout);

@@ -26,7 +26,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form id="login-form">
                         <div class="mb-3">
                             <label for="loginEmail" class="form-label">Email address</label>
                             <input type="email" class="form-control" id="loginEmail" placeholder="you@example.com">
@@ -41,6 +41,7 @@
             </div>
         </div>
     </div>
+    
     <!-- Signup Modal -->
     <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -50,7 +51,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form id="signup-form">
                         <div class="mb-3">
                             <label for="signupEmail" class="form-label">Email address</label>
                             <input type="email" class="form-control" id="signupEmail" placeholder="you@example.com">
@@ -72,7 +73,7 @@
     <header id="header">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid mx-5">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="../index.html">
                     <div class="logo-header">
                         <img src="../img/logo-security.png" alt="error-loading-img">
                     </div>
@@ -82,7 +83,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarContent">
-                    <ul class="navbar-nav mb-2 ms-lg-auto mb-lg-0 gap-2 gap-lg-4 align-items-end">
+                    <ul class="navbar-nav mb-2 ms-lg-auto mb-lg-0 gap-2 gap-lg-4 align-items-center">
                         <li class="nav-item">
                             <a class="nav-link" href="../index.html">Home</a>
                         </li>
@@ -98,15 +99,23 @@
                         <li class="nav-item">
                             <a class="nav-link" href="./contact.html">Contact</a>
                         </li>
-
-                        <li class="nav-item">
+                        <li class="nav-item" id="login-container">
                             <button type="button" class="btn btn-light" id="login-btn" data-bs-toggle="modal"
                                 data-bs-target="#loginModal">Login</button>
                             <!-- login dua vao navbar -->
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" id="signup-container">
                             <button type="button" class="btn btn-outline-light" id="signup-btn" data-bs-toggle="modal"
                                 data-bs-target="#signupModal">Signup</button>
+                        </li>
+                        <li class="nav-item dropdown d-none">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <img src="../img/profile-user.jfif" alt="User" width="48" height="48" class="rounded-circle" style="object-fit: cover;">
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item custom-dropdown" href="#">Logout</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -227,6 +236,7 @@
                 © 2025 GiaBao's Professional Security Services All rights reserved.
             </div>
     </footer>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>

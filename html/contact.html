@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/reponsive.css">
 </head>
+
 <body>
     <!-- Login Modal -->
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
@@ -24,7 +25,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form id="login-form">
                         <div class="mb-3">
                             <label for="loginEmail" class="form-label">Email address</label>
                             <input type="email" class="form-control" id="loginEmail" placeholder="you@example.com">
@@ -39,6 +40,7 @@
             </div>
         </div>
     </div>
+    
     <!-- Signup Modal -->
     <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -48,7 +50,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form id="signup-form">
                         <div class="mb-3">
                             <label for="signupEmail" class="form-label">Email address</label>
                             <input type="email" class="form-control" id="signupEmail" placeholder="you@example.com">
@@ -70,7 +72,7 @@
     <header id="header">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid mx-5">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="../index.html">
                     <div class="logo-header">
                         <img src="../img/logo-security.png" alt="error-loading-img">
                     </div>
@@ -80,7 +82,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarContent">
-                    <ul class="navbar-nav mb-2 ms-lg-auto mb-lg-0 gap-2 gap-lg-4 align-items-end">
+                    <ul class="navbar-nav mb-2 ms-lg-auto mb-lg-0 gap-2 gap-lg-4 align-items-center">
                         <li class="nav-item">
                             <a class="nav-link" href="../index.html">Home</a>
                         </li>
@@ -96,14 +98,23 @@
                         <li class="nav-item">
                             <a class="nav-link" href="./contact.html">Contact</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" id="login-container">
                             <button type="button" class="btn btn-light" id="login-btn" data-bs-toggle="modal"
                                 data-bs-target="#loginModal">Login</button>
                             <!-- login dua vao navbar -->
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" id="signup-container">
                             <button type="button" class="btn btn-outline-light" id="signup-btn" data-bs-toggle="modal"
                                 data-bs-target="#signupModal">Signup</button>
+                        </li>
+                        <li class="nav-item dropdown d-none">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <img src="../img/profile-user.jfif" alt="User" width="48" height="48" class="rounded-circle" style="object-fit: cover;">
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item custom-dropdown" href="#">Logout</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -144,12 +155,13 @@
                             </div>
                             <div class="mb-3">
                                 <label for="email" class="form-label">Your Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+                                <input type="email" class="form-control" id="email" placeholder="you@example.com"
+                                    required>
                             </div>
                             <div class="mb-3">
                                 <label for="subject" class="form-label">Subject</label>
-                                <input type="text" class="form-control" id="subject" placeholder="Inquiry about services"
-                                    required>
+                                <input type="text" class="form-control" id="subject"
+                                    placeholder="Inquiry about services" required>
                             </div>
                             <div class="mb-3">
                                 <label for="message" class="form-label">Your Message</label>
@@ -184,34 +196,54 @@
                 <div class="col-md-3 mb-4">
                     <h5 class="text-uppercase mb-3">Main Location</h5>
                     <ul class="list-unstyled">
-                        <li class="footer-link"><p>GiaBao HQ</p></li>
-                        <li class="footer-link"><p>Level 10, Landmark Plaza</p></li>
-                        <li class="footer-link"><p>HCMC, Vietnam</p></li>
+                        <li class="footer-link">
+                            <p>GiaBao HQ</p>
+                        </li>
+                        <li class="footer-link">
+                            <p>Level 10, Landmark Plaza</p>
+                        </li>
+                        <li class="footer-link">
+                            <p>HCMC, Vietnam</p>
+                        </li>
                     </ul>
                 </div>
 
                 <div class="col-md-3 mb-4">
                     <h5 class="text-uppercase mb-3">Addresses</h5>
                     <ul class="list-unstyled">
-                        <li class="footer-link"><p>📍 52 Ly Thai To, Da Nang</p></li>
-                        <li class="footer-link"><p>📍 19 Pham Van Dong, Hanoi</p></li>
-                        <li class="footer-link"><p>📍 88 Tran Hung Dao, Can Tho</p></li>
+                        <li class="footer-link">
+                            <p>📍 52 Ly Thai To, Da Nang</p>
+                        </li>
+                        <li class="footer-link">
+                            <p>📍 19 Pham Van Dong, Hanoi</p>
+                        </li>
+                        <li class="footer-link">
+                            <p>📍 88 Tran Hung Dao, Can Tho</p>
+                        </li>
                     </ul>
                 </div>
 
                 <div class="col-md-3 mb-4">
                     <h5 class="text-uppercase mb-3">Policy</h5>
                     <ul class="list-unstyled">
-                        <li class="footer-link"><p>Terms & Conditions</p></li>
-                        <li class="footer-link"><p>Privacy Policy</p></li>
-                        <li class="footer-link"><p>Refund Policy</p></li>
+                        <li class="footer-link">
+                            <p>Terms & Conditions</p>
+                        </li>
+                        <li class="footer-link">
+                            <p>Privacy Policy</p>
+                        </li>
+                        <li class="footer-link">
+                            <p>Refund Policy</p>
+                        </li>
                     </ul>
                 </div>
             </div>
             <hr class="bg-secondary">
             <div class="text-center small">
-            © 2025 GiaBao's Professional Security Services All rights reserved.
-        </div>
+                © 2025 GiaBao's Professional Security Services All rights reserved.
+            </div>
     </footer>
+    <script src="../js/main.js"></script>
 </body>
+
 </html>
